@@ -6,11 +6,27 @@ var hangman = {
     pilotNames: ["Maverick", "Goose", "Iceman", "Hollywood", "Cougar", "Sunshine", "Viper", "Jester"] ,// user to guess pilot name
     guessesRemaining: 12,
     lettersGuessed: [],
+    guessPilot: "",
 }
 
-// Game start function
+// choose random pilot name
+function randPilot () {
+    hangman.guessPilot = hangman.pilotNames[Math.floor(Math.random() * hangman.pilotNames.length)];
+}
 
-// Correct letter function
+var pilotProgress = [];
+//start game
+
+function start() {
+    hangman.guessesRemaining = 12;
+    hangman.lettersGuessed = [];
+    //write out document.getElementById statements
+    randPilot();
+    for (var i = 0; i < hangman.pilotLength; i ++)
+        pilotProgress.push('-');
+}
+
+start()
 
 // Incorrect letter function
 
