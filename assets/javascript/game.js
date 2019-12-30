@@ -22,7 +22,7 @@ function start() {
     hangman.lettersGuessed = [];
     //write out document.getElementById statements
     randPilot();
-    
+}
 
 
 
@@ -34,6 +34,8 @@ function start() {
 start()
 // Create event key that does the following: Adds key to an array, checks if letter pressed is contained in the string that was randomly selected from an array. 
 
-for (var i = 0; i < hangman.pilotLength; i ++)
+ var pilotLength = hangman.guessPilot.length //sets the length of the Pilot name
+
+for (var i = 0; i < pilotLength; i ++)
         pilotProgress.push('-'); 
-}  // https://stackoverflow.com/questions/35460999/how-to-make-a-hangman-game-in-js
+  // https://stackoverflow.com/questions/35460999/how-to-make-a-hangman-game-in-js
