@@ -22,16 +22,18 @@ function start() {
     hangman.lettersGuessed = [];
     //write out document.getElementById statements
     randPilot();
-    for (var i = 0; i < hangman.pilotLength; i ++)
-        pilotProgress.push('-');
-}
+    
 
-start()
+
 
 // Incorrect letter function
 
 // Game win function
 
 // Game lose function
-
+start()
 // Create event key that does the following: Adds key to an array, checks if letter pressed is contained in the string that was randomly selected from an array. 
+
+for (var i = 0; i < hangman.pilotLength; i ++)
+        pilotProgress.push('-'); 
+}  // https://stackoverflow.com/questions/35460999/how-to-make-a-hangman-game-in-js
