@@ -32,10 +32,15 @@ function start() {
 
 // Game lose function
 start()
+
 // Create event key that does the following: Adds key to an array, checks if letter pressed is contained in the string that was randomly selected from an array. 
+document.onkeyup = function(event) {
+    var userKey = event.key.toLowerCase();
 
  var pilotLength = hangman.guessPilot.length //sets the length of the Pilot name
 
-for (var i = 0; i < pilotLength; i ++)
+for (var i = 0; i < pilotLength; i ++) //pushes "-" for the length of the pilot name
         pilotProgress.push('-'); 
   // https://stackoverflow.com/questions/35460999/how-to-make-a-hangman-game-in-js
+
+}
