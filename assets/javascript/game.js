@@ -61,6 +61,18 @@ document.onkeyup = function(event) {
 
 for (var i = 0; i < pilotLength; i ++) //pushes "-" for the length of the pilot name
         pilotProgress.push('-'); 
+
+if (hangman.guessPilot.indexOf(userKey) != -1){ // if the character is found
+    for (var i = 0; i < wordLength; i ++){ // loop on all characters
+        if (hangman.guessPilot[i] == keyString) // if this is an occurance
+            pilotProgress[i] = hangman.guessPilot[i];
+        }
+    }
+    // else
+    // wrong choice
+
+
+
   // https://stackoverflow.com/questions/35460999/how-to-make-a-hangman-game-in-js
 
 }
