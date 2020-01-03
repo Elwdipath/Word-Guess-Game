@@ -21,7 +21,12 @@ function start() {
     hangman.guessesRemaining = 12;
     hangman.lettersGuessed = [];
     //write out document.getElementById statements
+    document.getElementById("wins").innerText = `Wins: ${hangman.wins}` ;
+    document.getElementById("losses").innerText = `Losses: ${hangman.losses}` ;
+    document.getElementById("guessesRemaining").innerText = `Guesses Remaining: ${hangman.guessesRemaining}` ;
+    // document.getElementById("lettersGuessed").innerText = `Your Guesses: ${hangman.guesses.join(" ").toUpperCase()}` ;
     randPilot();
+    
 }
 
 
@@ -36,6 +41,21 @@ start()
 // Create event key that does the following: Adds key to an array, checks if letter pressed is contained in the string that was randomly selected from an array. 
 document.onkeyup = function(event) {
     var userKey = event.key.toLowerCase();
+
+    //validate user uses a valid key
+    if (event.keyCode >= 65 && event.keyCode <= 90) {
+        //validate user hasn't already guessed that key. 
+         if (hangman.lettersGuessed.includes(userKey)) {
+         alert("Already guessed");
+         return; 
+        }
+    }
+    
+    else {
+        alert("Invalid character")
+        return; 
+        hangman.lettersGuessed.push(userKey);
+     }
 
  var pilotLength = hangman.guessPilot.length //sets the length of the Pilot name
 
