@@ -76,6 +76,8 @@ if (hangman.guessPilot.indexOf(hangman.guessPilot) != -1){ // if the character i
     // else
     // wrong choice
 
+//test
+
 
 
 
