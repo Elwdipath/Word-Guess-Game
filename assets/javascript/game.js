@@ -37,7 +37,9 @@ function start() {
 
 // Game lose function
 start()
-var pilotLength = hangman.guessPilot.length
+
+var pilotLength = hangman.guessPilot.length //sets the length of the Pilot name
+
 for (var i = 0; i < pilotLength; i ++) //pushes "-" for the length of the pilot name
         pilotProgress.push('-'); 
 
@@ -52,7 +54,7 @@ document.onkeyup = function(event) {
          alert("Already guessed");
          return; 
         }
-        hangman.lettersGuessed.push(userKey);
+        hangman.lettersGuessed.push(userKey); //push userKey to hangman.lettersGuessed
     }
     
     else {
@@ -61,7 +63,7 @@ document.onkeyup = function(event) {
         return; 
      }
 
-  //sets the length of the Pilot name
+  
 
 
 
@@ -76,6 +78,6 @@ if (hangman.guessPilot.indexOf(hangman.guessPilot) != -1){ // if the character i
 
 
 
-  // https://stackoverflow.com/questions/35460999/how-to-make-a-hangman-game-in-js
+
 
 }
