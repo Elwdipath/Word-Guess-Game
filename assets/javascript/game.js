@@ -64,7 +64,7 @@ for (var i = 0; i < pilotLength; i ++) //pushes "-" for the length of the pilot 
 
 if (hangman.guessPilot.indexOf(userKey) != -1){ // if the character is found
     for (var i = 0; i < wordLength; i ++){ // loop on all characters
-        if (hangman.guessPilot[i] == keyString) // if this is an occurance
+        if (hangman.guessPilot[i] == keyString) // if this is an occurance. keyString == userKey?
             pilotProgress[i] = hangman.guessPilot[i];
         }
     }
