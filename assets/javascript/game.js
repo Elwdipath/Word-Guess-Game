@@ -37,6 +37,9 @@ function start() {
 
 // Game lose function
 start()
+var pilotLength = hangman.guessPilot.length
+for (var i = 0; i < pilotLength; i ++) //pushes "-" for the length of the pilot name
+        pilotProgress.push('-'); 
 
 // Create event key that does the following: Adds key to an array, checks if letter pressed is contained in the string that was randomly selected from an array. 
 document.onkeyup = function(event) {
@@ -49,22 +52,22 @@ document.onkeyup = function(event) {
          alert("Already guessed");
          return; 
         }
+        hangman.lettersGuessed.push(userKey);
     }
     
     else {
         alert("Invalid character")
+        
         return; 
-        hangman.lettersGuessed.push(userKey);
      }
 
- var pilotLength = hangman.guessPilot.length //sets the length of the Pilot name
+  //sets the length of the Pilot name
 
-for (var i = 0; i < pilotLength; i ++) //pushes "-" for the length of the pilot name
-        pilotProgress.push('-'); 
 
-if (hangman.guessPilot.indexOf(userKey) != -1){ // if the character is found
-    for (var i = 0; i < wordLength; i ++){ // loop on all characters
-        if (hangman.guessPilot[i] == keyString) // if this is an occurance. keyString == userKey?
+
+if (hangman.guessPilot.indexOf(hangman.guessPilot) != -1){ // if the character is found
+    for (var i = 0; i < hangman.guessPilot.length; i ++){ // loop on all characters
+        if (hangman.guessPilot[i] == userKey) // if this is an occurance. keyString == userKey?
             pilotProgress[i] = hangman.guessPilot[i];
         }
     }
