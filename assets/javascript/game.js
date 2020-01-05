@@ -21,14 +21,19 @@ function start() {
     hangman.guessesRemaining = 12;
     hangman.lettersGuessed = [];
     //write out document.getElementById statements
+    
+    
     document.getElementById("wins").innerText = `Wins: ${hangman.wins}` ;
     document.getElementById("losses").innerText = `Losses: ${hangman.losses}` ;
     document.getElementById("guessesRemaining").innerText = `Guesses Remaining: ${hangman.guessesRemaining}` ;
-    // document.getElementById("lettersGuessed").innerText = `Your Guesses: ${hangman.guesses.join(" ").toUpperCase()}` ;
+    document.getElementById("lettersGuessed").innerText = `Your Guesses: ${hangman.lettersGuessed.join(" ").toUpperCase()}` ;
     randPilot();
     
 }
 
+// function pilotLoop() {
+//     for (var i = 0; i < pilotLength; i ++) //pushes "-" for the length of the pilot name
+//         pilotProgress.push('-'); 
 
 
 // Incorrect letter function
@@ -41,7 +46,9 @@ start()
 var pilotLength = hangman.guessPilot.length //sets the length of the Pilot name
 
 for (var i = 0; i < pilotLength; i ++) //pushes "-" for the length of the pilot name
-        pilotProgress.push('-'); 
+        pilotProgress.push('-').toLowerCase;
+
+document.getElementById("pilot").innerText = `Pilot: ${pilotProgress}`
 
 // Create event key that does the following: Adds key to an array, checks if letter pressed is contained in the string that was randomly selected from an array. 
 document.onkeyup = function(event) {
@@ -67,19 +74,23 @@ document.onkeyup = function(event) {
 
 
 
-if (hangman.guessPilot.indexOf(hangman.guessPilot) != -1){ // if the character is found
+if (hangman.guessPilot.indexOf(hangman.guessPilot).toLowerCase != -1){ // if the character is found
     for (var i = 0; i < hangman.guessPilot.length; i ++){ // loop on all characters
         if (hangman.guessPilot[i] == userKey) // if this is an occurance. keyString == userKey?
             pilotProgress[i] = hangman.guessPilot[i];
+        else
+            hangman.guessesRemaining--
         }
+        
     }
-    // else
-    // wrong choice
+    
+
+
 
 //test
 
 
 
-
-
+document.getElementById("pilot").innerText = `Pilot: ${pilotProgress}`
+document.getElementById("lettersGuessed").innerText = `Your Guesses: ${hangman.lettersGuessed.join(" ").toUpperCase()}` ;
 }
