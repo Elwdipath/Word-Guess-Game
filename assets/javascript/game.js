@@ -4,7 +4,7 @@ var hangman = {
     wins: 0,
     losses: 0,
     pilotNames: ["Maverick", "Goose", "Iceman", "Hollywood", "Cougar", "Sunshine", "Viper", "Jester"] ,// user to guess pilot name
-    guessesRemaining: 3,
+    guessesRemaining: 0,
     lettersGuessed: [],
     guessPilot: "",
 }
@@ -18,7 +18,7 @@ var pilotProgress = [];
 //start game
 
 function start() {
-    hangman.guessesRemaining = 3;
+    hangman.guessesRemaining = 6;
     hangman.lettersGuessed = [];
     //write out document.getElementById statements
     pilotProgress = [];

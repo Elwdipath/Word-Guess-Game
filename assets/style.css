@@ -7,3 +7,7 @@ body {
     background-color: #D94B51;
     border: 2px solid #3C87B9;
 }
+.container {
+    margin-left: 30%;
+    margin-right: 30%;
+}
