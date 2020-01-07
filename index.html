@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/style.css">
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery.js"></script>
     <title>Top Gun</title>
 </head>
 <body>
@@ -29,8 +30,34 @@
                 <p id = "guessesRemaining"> Chances Left</p>
                 <p id = "lettersGuessed"> Guessed Letters</p>
             </div>
-
         </div>
+        <div class="row">
+            <div class="col-md">
+                <div id="musicControls" class="text-center">
+                    <button class="btn btn-warning btn-xs theme-button">
+                      <span class="fa fa-music"></span> Go to the Danger Zone!</button>
+                    <button class="btn btn-dark btn-xs pause-button">
+                      <span class="fa fa-pause"></span> Too much Danger Zone...</button>
+                  </div>
+            </div>
+        
+        </div>
+        <script>
+            $(document).ready(function() {
+
+               // Gets Link for Theme Song
+               var audioElement = document.createElement("audio");
+               audioElement.setAttribute("src", "./assets/TopGunTheme.mp3");
+
+               // Theme Button
+               $(".theme-button").on("click", function() {
+               audioElement.play();
+               });
+               $(".pause-button").on("click", function() {
+               audioElement.pause();
+               });
+           })
+       </script>
         
     </div>
     <script src="./assets/javascript/game.js"></script>

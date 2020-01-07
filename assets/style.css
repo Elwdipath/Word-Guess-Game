@@ -2,3 +2,8 @@ body {
     background-color: #A6A6A6;
     font-family: 'Press Start 2P', cursive;
 }
+
+.theme-button {
+    background-color: #D94B51;
+    border: 2px solid #3C87B9;
+}
