@@ -4,16 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="./assets/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Top Gun</title>
 </head>
 <body>
     
-    <p id = "pilot">Pilot: </p>
-    <p id = "losses">Losses</p>
-    <p id = "wins"> Correct Letters</p>
-    <p id = "guessesRemaining"> Chances Left</p>
-    <p id = "lettersGuessed"> Guessed Letters</p>
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md">
+                <img src="./assets/images/top-gun-8-bit-logo.jpg" alt="">
+                <h2>Guess the Top Gun Pilot!</h2>
+                <hr>
+            </div>
 
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <p id = "pilot">Pilot: </p>
+                <p id = "losses">Losses</p>
+                <p id = "wins"> Correct Letters</p>
+                <p id = "guessesRemaining"> Chances Left</p>
+                <p id = "lettersGuessed"> Guessed Letters</p>
+            </div>
+
+        </div>
+        
+    </div>
     <script src="./assets/javascript/game.js"></script>
 </body>
 </html>
